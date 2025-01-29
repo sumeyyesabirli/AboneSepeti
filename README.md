@@ -54,10 +54,14 @@ Proje, Clean Architecture prensiplerine uygun olarak katmanlı bir mimari ile ge
 ## Kurulum
 
 1. Projeyi klonlayın
-2. Veritabanı bağlantı ayarlarını `appsettings.json` dosyasında yapılandırın
-3. Package Manager Console'da migration'ları uygulayın:
-   ```
-   Update-Database
+2. MongoDB'yi bilgisayarınıza yükleyin ve çalıştırın
+3. Veritabanı bağlantı ayarlarını `appsettings.json` dosyasında yapılandırın:
+   ```json
+   "MongoDbSettings": {
+     "ConnectionString": "mongodb://localhost:27017",
+     "DatabaseName": "AuthenticationDb",
+     "UsersCollectionName": "Users"
+   }
    ```
 4. Projeyi çalıştırın ve Swagger UI üzerinden API'yi test edin
 
